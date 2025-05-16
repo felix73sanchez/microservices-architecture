@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: optional:configserver:http://localhost:8888/
+
+#  cloud:
+#    gateway:
+#        routes:
+#          - id: employee-service
+#            uri: lb://EMPLOYEE-SERVICE
+#            predicates:
+#              - Path=/api/employees/**
+#
+#          - id: departament-service
+#            uri: lb://DEPARTAMENT-SERVICE
+#            predicates:
+#              - Path=/api/departments/**
+#
+##  cloud:
+##    gateway:
+##      discovery:
+##        locator:
+##          enabled: true
+##          lower-case-service-id: true
+#              -
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#
+#server:
+#  port: 9191
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
